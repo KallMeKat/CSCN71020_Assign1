@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void printWelcomeMenu();
 void printOptions();
@@ -20,9 +21,11 @@ void main() {
 	{
 	case 1:
 		add();
+		exit(1);
 
 	case 2:
 		sub();
+		exit(1);
 
 	}
 }
@@ -49,7 +52,7 @@ void add() {
 	printf("%lf + %lf = %lf\n", num1, num2, result);
 }
 
-void sub() { // or 42 - 0?
+void sub() { 
 
 	int num1 = 42;
 	int num2 = 0;
@@ -57,13 +60,7 @@ void sub() { // or 42 - 0?
 
 	result = num1 - num2;
 
-	printf("%d, - %d = %d", num1, num2, result);
-	/*double num1, num2, result;
-	printf("Enter the first value:");
-	scanf_s("%lf", &num1);
-	printf("Enter the second value:");
-	scanf_s("%lf", &num2);
-	result = num1 - num2;
-	printf("%lf - %lf = %lf\n", num1, num2, result);*/
+	printf("%d - %d = %d", num1, num2, result);
+	
 
 }
